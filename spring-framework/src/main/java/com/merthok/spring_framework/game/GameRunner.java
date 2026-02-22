@@ -3,20 +3,16 @@ package com.merthok.spring_framework.game;
 public class GameRunner {
     private MarioGame marioGame;
     private SuperContraGame superContraGame;
-    public GameRunner(MarioGame marioGame) {
-        this.marioGame = marioGame;
+    private GamingConsole game;
 
-    }
-
-    public GameRunner(SuperContraGame superContraGame) {
-        this.superContraGame = superContraGame;
+    public GameRunner(GamingConsole game){
+        this.game = game;
     }
 
     public void run() {
-        System.out.println("Mario is running!");
-        superContraGame.down();
-        superContraGame.up();
-        superContraGame.right();
-        superContraGame.left();
+        game.down();
+        game.up();
+        game.right();
+        game.left();
     }
 }

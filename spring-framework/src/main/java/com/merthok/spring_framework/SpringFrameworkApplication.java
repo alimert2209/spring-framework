@@ -12,9 +12,11 @@ public class SpringFrameworkApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringFrameworkApplication.class, args);
 
-//		MarioGame marioGame = new MarioGame();
+		MarioGame marioGame = new MarioGame();
 		SuperContraGame superContraGame = new SuperContraGame();
 		GameRunner gameRunner = new GameRunner(superContraGame);
+		gameRunner.run();
+		gameRunner = new GameRunner(marioGame);
 		gameRunner.run();
 	}
 

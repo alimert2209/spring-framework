@@ -1,21 +1,28 @@
 package com.merthok.spring_framework.game;
 
-public class MarioGame {
+public class MarioGame implements GamingConsole {
 
-    public void up(){
+
+    @Override
+    public void up() {
         System.out.println("up");
     }
 
-    public void down(){
+    @Override
+    public void down() {
         System.out.println("down");
+
     }
 
-    public void right(){
+    @Override
+    public void right() {
         System.out.println("right");
+
     }
 
-    public void left(){
+    @Override
+    public void left() {
         System.out.println("left");
-    }
 
+    }
 }
