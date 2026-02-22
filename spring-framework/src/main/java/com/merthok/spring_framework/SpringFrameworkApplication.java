@@ -2,6 +2,7 @@ package com.merthok.spring_framework;
 
 import com.merthok.spring_framework.game.GameRunner;
 import com.merthok.spring_framework.game.MarioGame;
+import com.merthok.spring_framework.game.PacmanGame;
 import com.merthok.spring_framework.game.SuperContraGame;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,10 +15,17 @@ public class SpringFrameworkApplication {
 
 		MarioGame marioGame = new MarioGame();
 		SuperContraGame superContraGame = new SuperContraGame();
+		PacmanGame pacmanGame = new PacmanGame();
+
 		GameRunner gameRunner = new GameRunner(superContraGame);
 		gameRunner.run();
 		gameRunner = new GameRunner(marioGame);
 		gameRunner.run();
+		gameRunner = new GameRunner(pacmanGame);
+		gameRunner.run();
 	}
 
 }
+
+
+
